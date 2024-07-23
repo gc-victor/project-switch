@@ -1,0 +1,40 @@
+[package]
+name = "project-switch"
+version = "0.0.0"
+edition = "2021"
+repository = "https://github.com/gc-victor/project-switch"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+dirs = "5.0"
+shellexpand = "3.1.0"
+
+[dev-dependencies]
+assert_cmd = "2.0"
+
+[[bin]]
+# Project Switch
+name = "project-switch"
+path = "src/main.rs"
+
+# The profile that 'cargo dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
+
+# Config for 'cargo dist'
+[workspace.metadata.dist]
+# The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
+cargo-dist-version = "0.19.1"
+# CI backends to support
+ci = "github"
+# The installers to generate for each app
+installers = ["shell", "powershell"]
+# Target platforms to build apps for (Rust target-triple syntax)
+targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu"]
+# Publish jobs to run in CI
+pr-run-mode = "plan"
+# Path that installers should place binaries in
+install-path = "CARGO_HOME"
+# Whether to install an updater program
+install-updater = true
