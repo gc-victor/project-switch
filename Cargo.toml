@@ -1,6 +1,6 @@
 [package]
 name = "project-switch"
-version = "0.0.0"
+version = "0.1.0"
 edition = "2021"
 repository = "https://github.com/gc-victor/project-switch"
 
