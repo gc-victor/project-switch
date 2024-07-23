@@ -61,7 +61,7 @@ project-switch remove my-project
 project-switch go my-project
 ```
 
-We do recommend adding the following alias to your shell configuration file (e.g., `.bashrc`, `.zshrc`, etc.):
+We recommend adding the alias to your shell configuration file (e.g., `.bashrc` or `.zshrc`). These aliases are just suggestions; use your own alias if you prefer. Example:
 
 ```sh
 alias pswa='project-switch add'
@@ -69,6 +69,12 @@ alias pswl='project-switch list'
 alias pswlr='project-switch list --raw'
 alias pswr='project-switch remove'
 alias pswg='project-switch go'
+```
+
+After adding the alias, you can use the following commands:
+
+```sh
+source ~/.zshrc # or source ~/.bashrc
 ```
 
 ## Configuration
