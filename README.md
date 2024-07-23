@@ -12,12 +12,6 @@ macOS and Linux (not NixOS, Alpine, or Asahi):
 curl --proto '=https' --tlsv1.2 -LsSf https://github.com/gc-victor/project-switch/releases/latest/download/project-switch-installer.sh | sh
 ```
 
-Windows PowerShell:
-
-```powershell
-irm https://github.com/gc-victor/project-switch/releases/latest/download/project-switch-installer.ps1 | iex
-```
-
 ## Features
 
 - **Add Projects**: Easily add your current working directory as a new project. If a project name is not specified, the name of the current directory will be used.
@@ -83,7 +77,6 @@ The Project Switch CLI automatically creates a configuration directory and a dat
 
 - Linux: `~/.config/project-switch`
 - MacOS: `~/Library/Application Support/project-switch`
-- Windows: `C:\Users\<username>\AppData\Roaming\project-switch`
 
 ## Acknowledgements
 
